@@ -1,0 +1,19 @@
+version: '2'
+services:
+  db:
+    image: postgres
+  web:
+    build: .
+    command: /bin/bash
+    environment:
+      - A=1
+      - B=2
+    volumes:
+      - .:/myapp
+    ports:
+      - "3003:3000"
+    depends_on:
+      - db
+    stdin_open: true
+    tty: true
+    container_name: 'friend-zone'

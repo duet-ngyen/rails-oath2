@@ -1,0 +1,13 @@
+version: '2'
+services:
+  db:
+    image: postgres
+  web:
+    build: .
+    container_name: 'friend-zone'
+    volumes:
+      - .:/myapp
+    ports:
+      - "3003:3000"
+    depends_on:
+      - db
