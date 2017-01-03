@@ -7,18 +7,15 @@ Swagger::Docs::Config.register_apis({
                                             # the output location where your .json files are written to
                                             :api_file_path => "public",
                                             # the URL base path to your API
-                                            :base_path => "http://localhost:3003",
+                                            :base_path => ENV['BASE_PATH'],
                                             # if you want to delete all .json files at each generation
                                             :clean_directory => false,
                                             # add custom attributes to api-docs
                                             :attributes => {
                                                 :info => {
-                                                    "title" => "Bookstore App",
-                                                    "description" => "This is an API for an online bookstore",
-                                                    "termsOfServiceUrl" => "https://github.com/switzersc/rails-5-api-tutorial",
-                                                    "contact" => "shelbyswitzer@gmail.com",
-                                                    "license" => "Apache 2.0",
-                                                    "licenseUrl" => "http://www.apache.org/licenses/LICENSE-2.0.html"
+                                                    "title" => "Friend Zone app",
+                                                    "description" => "This is an API for an Friend Zone app",
+                                                    "contact" => "phankiet91@gmail.com"
                                                 }
                                             }
                                         }

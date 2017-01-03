@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
-  get '/api' => redirect('/api/swagger/dist/index.html?url=/api-docs.json')
+  get 'home/index'
+  root :to => 'home#index'
+
+  get 'api' => redirect('/api/swagger/dist/index.html?url=/api-docs.json')
+  root :to => 'index#index'
   namespace :api do
     scope defaults: { format: 'json' } do
       mount_devise_token_auth_for 'User', at: 'auth',controllers: {
