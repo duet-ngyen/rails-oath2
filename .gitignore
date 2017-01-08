@@ -20,5 +20,3 @@
 /config/application.yml
 /config/database.yml
 /vendor/bundle/*
-public/api/*
-!public/api/swagger/*
