@@ -83,5 +83,15 @@ Rails.application.configure do
   end
 
   # Do not dump schema after migrations.
-  config.active_record.dump_schema_after_migration = false
+  config.active_record.dump_schema_after_migration = true
+  require "refile/s3"
+
+  aws = {
+      access_key_id: ENV['AWS_ACCESS_KEY'],
+      secret_access_key: ENV['AWS_SERCET_KEY'],
+      region: "sa-east-1",
+      bucket: "my-bucket",
+  }
+  Refile.cache = Refile::S3.new(prefix: "cache", **aws)
+  Refile.store = Refile::S3.new(prefix: "store", **aws)
 end

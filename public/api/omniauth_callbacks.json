@@ -8,7 +8,7 @@
       "path": "/api/auth/{provider}/callback.json",
       "operations": [
         {
-          "summary": "Create a new User item",
+          "summary": "Create a new User with face book",
           "parameters": [
             {
               "paramType": "query",
@@ -28,7 +28,7 @@
               "paramType": "path",
               "name": "provider",
               "type": "string",
-              "description": "Page number",
+              "description": "[facebook]",
               "required": false
             }
           ],

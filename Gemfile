@@ -40,9 +40,14 @@ gem 'rack-cors'
 gem 'devise'
 gem 'devise_token_auth'
 gem 'swagger-docs'
-gem "awesome_print", require:"ap"
-gem "koala", "~> 2.2"
-gem "figaro"
+gem 'awesome_print', require: 'ap'
+gem 'koala', '~> 2.2'
+gem 'figaro'
+gem 'refile', github: 'refile/refile', require: 'refile/rails'
+gem 'refile-mini_magick', github: 'refile/refile-mini_magick'
+gem 'sinatra', github: 'sinatra/sinatra', branch: 'master'
+gem "refile-s3"
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
@@ -55,8 +60,8 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
-  gem "pry-rails"
-  gem "better_errors"
+  gem 'pry-rails'
+  gem 'better_errors'
   gem 'meta_request'
 
 end

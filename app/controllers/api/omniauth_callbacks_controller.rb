@@ -6,10 +6,10 @@ class Api::OmniauthCallbacksController < DeviseTokenAuth::OmniauthCallbacksContr
   swagger_controller :OmniauthCallbacks, "OmniauthCallbacks"
 
   swagger_api :omniauth_success do |api|
-    summary "Create a new User item"
+    summary "Create a new User with face book"
     param :query, :access_token, :string, :require, 'access_token'
     param :query, :expires_in, :integer, :require, "expires_in"
-    param :path, :provider, :string, :require, "Page number"
+    param :path, :provider, :string, :require, "[facebook]"
 
     response :unauthorized
     response :not_acceptable
