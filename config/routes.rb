@@ -8,7 +8,8 @@ Rails.application.routes.draw do
     scope defaults: { format: 'json' } do
       mount_devise_token_auth_for 'User', at: 'auth',controllers: {
           omniauth_callbacks: 'api/omniauth_callbacks',
-          registrations: 'api/v1/registrations'
+          registrations: 'api/v1/registrations',
+          sessions: 'api/v1/sessions'
       }
 
       api_version(module: 'V1', path: {value: 'v1'}) do

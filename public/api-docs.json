@@ -4,17 +4,22 @@
   "basePath": "http://localhost:3003",
   "apis": [
     {
+      "path": "/api/v1/sessions.{format}",
+      "description": "SessionController"
+    },
+    {
+      "path": "/api/v1/registrations.{format}",
+      "description": "RegistrationsController"
+    },
+    {
       "path": "/api/omniauth_callbacks.{format}",
       "description": "OmniauthCallbacks"
     }
   ],
   "authorizations": null,
   "info": {
-    "title": "Bookstore App",
-    "description": "This is an API for an online bookstore",
-    "termsOfServiceUrl": "https://github.com/switzersc/rails-5-api-tutorial",
-    "contact": "shelbyswitzer@gmail.com",
-    "license": "Apache 2.0",
-    "licenseUrl": "http://www.apache.org/licenses/LICENSE-2.0.html"
+    "title": "Friend Zone app",
+    "description": "This is an API for an Friend Zone app",
+    "contact": "phankiet91@gmail.com"
   }
 }
